@@ -1,0 +1,396 @@
+/* Style général */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Ajoute un défilement fluide */
+}
+
+/* Style des sections */
+section {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Header moderne */
+.modern-header {
+    background-color: #000;
+    border-bottom: 2px solid #ff7e5f;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-brand {
+    color: #ff7e5f;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s;
+    margin-left: 15px;
+}
+
+.navbar-brand:hover {
+    color: #feb47b;
+}
+
+.navbar-toggler {
+    border: none;
+    color: #ff7e5f;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff7e5f;
+}
+
+/* Réduction de la taille de la nav-bar en version mobile */
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+}
+
+/* Section Accueil (Hero Section) */
+.hero-section {
+    color: #fff;
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px;
+    background: url('https://img.freepik.com/photos-premium/iptv-bouton-rouge-clavier-noir-ordinateur_226262-931.jpg?ga=GA1.1.1849618682.1729002216&semt=ais_hybrid') no-repeat center center;
+    background-size: cover;
+    background-position: right center !important;
+}
+
+.hero-section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.hero-text {
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 8vw !important;
+    font-weight: bold;
+}
+
+.hero-description-before {
+    font-size: 1rem;
+    color: lightgrey;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+}
+
+.hero-image {
+    max-width: 50%;
+    max-height: 100%;
+    border-radius: 15px;
+    opacity: 0.8;
+}
+
+.animated-title {
+    font-size: 2em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #FF0000, #ffffff, #FF4D4D, #FF1A1A);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorChange 5s ease-in-out infinite;
+}
+
+/* Animation pour le changement de couleur du texte */
+@keyframes colorChange {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
+/* Masque l'image sur les petits écrans */
+@media (max-width: 768px) {
+    .hero-image {
+        display: none;
+    }
+}
+
+/* Section info */
+#info .container {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+    gap: 25px;
+}
+
+#info .container p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+#why-choose .benefits-list li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+}
+
+#why-choose .benefits-list i {
+    font-size: 1.2rem;
+}
+
+.animated-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2ecc71;
+}
+
+#why-choose p {
+    font-size: 1rem;
+    color: #333;
+}
+
+#why-choose .lead {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Section des réseaux sociaux */
+.social-section h2 {
+    margin: 20px;
+    font-size: 1.8em;
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-card {
+    flex: 1 1 200px;
+    /* Largeur minimale */
+    max-width: 250px;
+    /* Largeur maximale */
+    padding: 15px;
+    text-align: center;
+    border: #FF1A1A solid 2px;
+    border-radius: 10px;
+    background-color: #222;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-card a {
+    display: block;
+    color: #FF1A1A;
+    font-size: 36px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.social-card a:hover {
+    color: gray;
+}
+
+.social-card p {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+/* Ajustements responsive pour les petits écrans */
+@media (max-width: 768px) {
+    .social-card {
+        flex: 1 1 150px;
+        max-width: 200px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-card a {
+        font-size: 28px;
+    }
+
+    .social-card p {
+        font-size: 0.85em;
+    }
+}
+
+/* Section Abonnements */
+.advert {
+    background-color: #333;
+    color: #fff;
+    border: #FF4D4D solid 2px;
+}
+
+.advert h4 {
+    color: #FF4D4D;
+}
+
+#abonnements {
+    background: url("./assets/bck.jpg");
+    color: #fff;
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#abonnements::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+}
+
+.custom-card {
+    background-color: #222;
+    border: #FF1A1A solid 2px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.btn-primary {
+    background-color: #333;
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #FF4D4D;
+    border: none;
+    box-shadow: none;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title,
+.card-subtitle {
+    color: #ff7e5f;
+}
+
+/* Section Contact */
+.contact-section {
+    padding: 80px 20px;
+    background-color: #111;
+    color: #fff;
+    text-align: left;
+    background: url('https://img.freepik.com/photos-gratuite/couple-regardant-service-streaming-ensemble-maison-interieur_23-2148977261.jpg?ga=GA1.1.1849618682.1729002216&semt=ais_hybrid');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ff7e5f;
+    text-align: center;
+}
+
+.contact-form {
+    margin: 0 auto;
+}
+
+.form-control {
+    background-color: #222;
+    border: none;
+}
+
+.form-control:focus {
+    outline: none;
+    /* Supprime l'effet de contour par défaut */
+    background-color: #333;
+    /* Couleur de fond lors du focus */
+}
+
+.response-message {
+    margin-top: 20px;
+}
+
+/* Bouton avec dégradé */
+.btn-gradient {
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-gradient:hover {
+    background: #ff7e5f;
+    transform: translateY(-2px);
+}
+
+.btn-gradient:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 126, 95, 0.6);
+}
