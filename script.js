@@ -1,36 +1,33 @@
-document.getElementById('contactForm').addEventListener('submit', function (event) {
-    event.preventDefault();
 
-    // Récupération des valeurs des champs
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Empêche le rechargement de la page
 
-    // Vérification de base des champs
-    if (name && email && message) {
-        // Envoi des données au back-end PHP
-        fetch('contact-form-handler.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    displayResponse(data.message, 'success');
-                } else {
-                    displayResponse(data.message, 'error');
-                }
-            })
-            .catch(() => {
-                displayResponse("Erreur de connexion avec le serveur.", 'error');
-            });
-    } else {
-        displayResponse('Veuillez remplir tous les champs.', 'error');
-    }
+    // Récupère les données du formulaire
+    const formData = new FormData(this);
+
+    // Envoi des données via AJAX
+    fetch("index.php", { // Remplacez par le chemin réel vers le script PHP
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        const responseMessage = document.getElementById("responseMessage");
+        if (data.status === "success") {
+            responseMessage.innerHTML = data.message;
+            responseMessage.style.color = "green";
+            this.reset(); // Réinitialise le formulaire en cas de succès
+        } else {
+            responseMessage.innerHTML = data.message;
+            responseMessage.style.color = "red";
+        }
+    })
+    .catch(error => {
+        console.error("Erreur:", error);
+        document.getElementById("responseMessage").innerHTML = "Une erreur s'est produite. Veuillez réessayer plus tard.";
+    });
 });
+
 
 
 document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
