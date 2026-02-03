@@ -473,7 +473,8 @@ img {
     border: 2px solid #E50914;
     transform: scale(1.05);
     position: relative;
-    animation: featuredPulse 2s ease-in-out infinite;
+    /* Combine animations: Appear first (matched to 2nd child timing), then Pulse */
+    animation: pricingAppear 0.6s ease-out 0.4s forwards, featuredPulse 2s ease-in-out infinite;
 }
 
 @keyframes featuredPulse {
