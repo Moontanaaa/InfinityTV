@@ -1,119 +1,92 @@
+// ===================================
+// NETFLIX UI - INFINITYTV
+// JavaScript Interactions
+// ===================================
 
-document.getElementById("contactForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Empêche le rechargement de la page
+// Navbar Scroll Effect
+window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.netflix-nav');
 
-    // Récupère les données du formulaire
-    const formData = new FormData(this);
-    const form = this;
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
 
-    // Affiche un loader
-    Swal.fire({
-        title: 'Envoi en cours...',
-        text: 'Veuillez patienter un instant.',
-        icon: 'info',
-        allowOutsideClick: false,
-        showConfirmButton: false,
-        willOpen: () => {
-            Swal.showLoading();
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
     });
-
-    // Envoi des données via AJAX
-    fetch("index.php", {
-        method: "POST",
-        body: formData
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status === "success") {
-                Swal.fire({
-                    title: 'Succès !',
-                    text: data.message,
-                    icon: 'success',
-                    confirmButtonColor: '#ff7e5f',
-                    background: '#222',
-                    color: '#fff'
-                });
-                form.reset();
-            } else {
-                throw new Error(data.message || "Erreur inconnue");
-            }
-        })
-        .catch(error => {
-            console.warn("Mode Démo activé (Erreur PHP/Serveur détectée) :", error);
-
-            // SIMULATION POUR DEMO SI PHP ECHOUE (ex: local sans serveur mail)
-            // Attend 1.5s pour faire "vrai"
-            setTimeout(() => {
-                Swal.fire({
-                    title: 'Message Envoyé !',
-                    text: "Merci de nous avoir contactés. Nous vous répondrons sous 24h (Mode Démo).",
-                    icon: 'success',
-                    confirmButtonColor: '#ff7e5f',
-                    background: '#222',
-                    color: '#fff'
-                });
-                form.reset();
-            }, 1500);
-        });
 });
 
+// Intersection Observer for Scroll Reveal Animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
 
 
-document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+
+// Observe pricing cards
+document.querySelectorAll('.pricing-card').forEach(card => {
+    observer.observe(card);
+});
+
+// Optional: Add parallax effect to billboard on scroll
+window.addEventListener('scroll', function () {
+    const billboard = document.querySelector('.billboard-bg');
+    if (billboard) {
+        const scrolled = window.scrollY;
+        billboard.style.transform = `translateY(${scrolled * 0.5}px)`;
+    }
+});
+
+// Mobile Menu interactions
+const hamburger = document.querySelector('.hamburger-menu');
+const mobileMenu = document.querySelector('.mobile-menu-overlay');
+const closeMenu = document.querySelector('.mobile-menu-close');
+const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Stop scrolling
+    });
+}
+
+if (closeMenu) {
+    closeMenu.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Resume scrolling
+    });
+}
+
+// Close menu when clicking a link
+mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        navbarCollapse.classList.remove('show'); // Fermer le menu
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
     });
 });
 
-
-window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".modern-header");
-
-    if (window.pageYOffset > 100) { // Lorsque le défilement dépasse 100 pixels
-        navbar.classList.add("fixed"); // Ajoute la classe fixed
-    } else {
-        navbar.classList.remove("fixed"); // Retire la classe fixed
-    }
-});
-
-// Initialisation AOS
-document.addEventListener('DOMContentLoaded', function () {
-    AOS.init({
-        duration: 1000,
-        easing: 'ease-out-cubic',
-        once: true,
-        mirror: false
-    });
-
-    // 3D Tilt Effect
-    if (typeof VanillaTilt !== 'undefined') {
-        VanillaTilt.init(document.querySelectorAll(".custom-card, .social-card"), {
-            max: 15,
-            speed: 400,
-            glare: true,
-            "max-glare": 0.2,
-            scale: 1.05
-        });
-    }
-
-    // Back to Top Button Logic
-    const backToTopButton = document.getElementById("backToTop");
-    if (backToTopButton) {
-        window.addEventListener("scroll", function () {
-            if (window.pageYOffset > 300) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
-        });
-
-        backToTopButton.addEventListener("click", function () {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    }
-});
+// Console message
+console.log('%c🎬 InfinityTV - Powered by Netflix UI', 'color: #E50914; font-size: 20px; font-weight: bold;');
+console.log('%cDéveloppé par Montana Connect', 'color: #808080; font-size: 12px;');

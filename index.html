@@ -3,564 +3,342 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfinityTV - IPTV Premium 4K/UHD France</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <!-- SEO Meta Tags -->
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https:; script-src 'self' https: 'unsafe-inline'; style-src 'self' https: 'unsafe-inline'; img-src 'self' https: data:; font-src 'self' https: data:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
     <meta name="description"
-        content="Le meilleur service IPTV en France. +50 000 chaînes 4K, Full HD, HEVC. VOD illimitée (Films, Séries, Netflix, Canal+). Essai Gratuit 24h. Sans coupure.">
+        content="InfinityTV - Le meilleur service IPTV en France. +50 000 chaînes, Films et Séries en 4K/FHD. Essai gratuit 24h. Compatible Smart TV, Android, iOS, Mag.">
     <meta name="keywords"
-        content="IPTV France, abonnement IPTV, IPTV 4K, streaming illimité, VOD, chaînes sport, Canal+, Netflix gratuit, meilleur IPTV 2024">
-    <meta name="author" content="InfinityTV">
-    <meta name="robots" content="index, follow">
+        content="IPTV France, Abonnement IPTV, Meilleur IPTV, IPTV 4K, IPTV Smarters, Smart IPTV, Streaming, VOD, Netflix gratuit, Amazon Prime, Canal+, BeIN Sports">
+    <link rel="canonical" href="https://iptvinfinity.com/" />
+    <title>InfinityTV - Meilleur Abonnement IPTV Premium 4K & VOD en France</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://iptvinfinity.com/">
+    <meta property="og:title" content="InfinityTV - Service IPTV Premium N°1 en France (4K/8K)">
+    <meta property="og:description"
+        content="Accédez à +50 000 chaînes et VOD en 4K. Essai gratuit 24h sans carte bancaire. Support client 24/7 en Français.">
+    <meta property="og:image" content="https://iptvinfinity.com/assets/hero_bg.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://iptvinfinity.com/">
+    <meta property="twitter:title" content="InfinityTV - Service IPTV Premium N°1 en France">
+    <meta property="twitter:description"
+        content="Accédez à +50 000 chaînes et VOD en 4K. Essai gratuit 24h. Anti-Freeze garanti.">
+    <meta property="twitter:image" content="https://iptvinfinity.com/assets/hero_bg.png">
+
+    <!-- AI / Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "InfinityTV IPTV Premium",
+      "url": "https://iptvinfinity.com/",
+      "logo": "https://iptvinfinity.com/assets/logo.png",
+      "image": "https://iptvinfinity.com/assets/hero_bg.png",
+      "description": "Service IPTV Premium offrant plus de 50 000 chaînes TV en direct et des contenus à la demande (VOD) en qualité 4K et FHD.",
+      "provider": {
+        "@type": "Organization",
+        "name": "InfinityTV",
+        "url": "https://iptvinfinity.com",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "Infinitytv.infoclients@gmail.com",
+          "contactType": "customer service",
+          "availableLanguage": "French"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "50.00",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "1250"
+      }
+    }
+    </script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./assets/favicon.png">
-    <link rel="apple-touch-icon" href="./assets/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png">
 
-    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://moontanaaa.github.io/InfinityTV/">
-    <meta property="og:title" content="InfinityTV - Le Streaming Illimité en 4K">
-    <meta property="og:description"
-        content="Accédez à +50 000 chaînes et VOD. Sport, Cinéma, Séries. Qualité Premium Sans Coupure. Essai Gratuit !">
-    <meta property="og:image" content="https://moontanaaa.github.io/InfinityTV/assets/hero_bg.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://moontanaaa.github.io/InfinityTV/">
-    <meta name="twitter:title" content="InfinityTV - IPTV Premium France">
-    <meta name="twitter:description"
-        content="Profitez du meilleur de la télé. Sport, Cinéma et Séries en 4K/UHD. Testez maintenant !">
-    <meta name="twitter:image" content="https://moontanaaa.github.io/InfinityTV/assets/hero_bg.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-mobile.css">
 
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3428844633498034"
-        crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-3428844633498034">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Particle Background -->
-    <div id="particles-js"></div>
-
-    <!-- Header -->
-    <header class="modern-header">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand animated-title" href="#" title="FRANCE IPTV InfinityTV">InfinityTV</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Netflix Navbar -->
+    <nav class="netflix-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="nav-logo">INFINITYTV</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#abonnements">Abonnements</a></li>
+                    <li><a href="#temoignages">Avis</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="https://wa.me/33766751050?text=Je%20veux%20m'abonner" class="btn-subscribe">S'abonner</a>
+                <div class="hamburger-menu">
                     <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#home">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#info">Information</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#abonnements">Abonnements</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
 
-    <!-- Section Accueil -->
-    <section id="home" class="d-flex align-items-center justify-content-between p-5 hero-section">
-        <div class="hero-text">
-            <p class="hero-description-before">Décuplez votre experience du streaming, <br>
-                tout en faisant des économies</p>
-            <h1 class="hero-title animated-title" title="titre">InfinityTV</h1>
-            <p class="hero-description">Profitez des meilleures chaînes avec notre service INFINITY IPTV de haute
-                qualité.
-                <br>
-                Toutes les chaînes payantes dans un seul abonnement, avec accès à toutes les chaînes en direct, <br>
-                toutes nos series préférées ainsi que vos films, même les dernières sorties cinéma.
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+            <div class="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#abonnements">Nos Offres</a></li>
+                <li><a href="#temoignages">Avis Clients</a></li>
+                <li><a href="https://wa.me/33766751050?text=Je%20veux%20m'abonner"
+                        style="color: #E50914; font-weight: 700;">S'abonner</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Billboard Hero -->
+    <section class="billboard" id="home">
+        <!-- Suppression du style inline pour laisser le CSS gérer l'image (Mobile vs Desktop) -->
+        <div class="billboard-bg" role="img" aria-label="Affiche principale cinématique">
+        </div>
+        <div class="billboard-vignette"></div>
+        <div class="billboard-content">
+            <h1 class="billboard-title">INFINITYTV</h1>
+            <p class="billboard-description">
+                Regardez des milliers de chaînes internationales, films et séries en 4K Ultra HD.
+                Sans engagement. Annulable à tout moment.
             </p>
-            <a href="#info" class="btn btn-primary">plus d'information</a>
+            <div class="billboard-buttons">
+                <a href="#abonnements" class="btn-play">
+                    <i class="fas fa-shopping-cart"></i> Voir les offres
+                </a>
+                <a href="https://wa.me/33766751050?text=Je%20veux%20un%20test" class="btn-info">
+                    <i class="fab fa-whatsapp"></i> Test Gratuit
+                </a>
+            </div>
         </div>
     </section>
-    </section>
 
-    </section>
-
-    <!-- Marquee Slider -->
-    <div class="marquee-section">
+    <!-- Marquee Section (Bandeau Défilant Principal - Films/Séries) -->
+    <section class="marquee-section">
         <div class="marquee-content">
-            <span class="marquee-item"><i class="fab fa-netflix"></i> NETFLIX</span>
-            <span class="marquee-item"><i class="fab fa-amazon"></i> PRIME VIDEO</span>
-            <span class="marquee-item"><i class="fas fa-play-circle"></i> DISNEY+</span>
-            <span class="marquee-item"><i class="fas fa-tv"></i> CANAL+</span>
-            <span class="marquee-item"><i class="fas fa-film"></i> HBO MAX</span>
-            <span class="marquee-item"><i class="fas fa-futbol"></i> BEIN SPORTS</span>
-            <!-- Duplication pour l'effet infini -->
-            <span class="marquee-item"><i class="fab fa-netflix"></i> NETFLIX</span>
-            <span class="marquee-item"><i class="fab fa-amazon"></i> PRIME VIDEO</span>
-            <span class="marquee-item"><i class="fas fa-play-circle"></i> DISNEY+</span>
-            <span class="marquee-item"><i class="fas fa-tv"></i> CANAL+</span>
-            <span class="marquee-item"><i class="fas fa-film"></i> HBO MAX</span>
-            <span class="marquee-item"><i class="fas fa-futbol"></i> BEIN SPORTS</span>
-            <span class="marquee-item"><i class="fab fa-netflix"></i> NETFLIX</span>
-            <span class="marquee-item"><i class="fab fa-amazon"></i> PRIME VIDEO</span>
-            <span class="marquee-item"><i class="fas fa-play-circle"></i> DISNEY+</span>
-            <span class="marquee-item"><i class="fas fa-tv"></i> CANAL+</span>
-            <span class="marquee-item"><i class="fas fa-film"></i> HBO MAX</span>
-            <span class="marquee-item"><i class="fas fa-futbol"></i> BEIN SPORTS</span>
+            <!-- Duplication x2 pour l'effet infini -->
+            <div class="marquee-track">
+                <!-- Set 1 -->
+                <img src="assets/poster_crime.png" alt="Crime">
+                <img src="assets/poster_scifi.png" alt="Sci-Fi">
+                <img src="assets/poster_action.png" alt="Action">
+                <img src="assets/poster_fantasy.png" alt="Fantasy">
+                <img src="assets/poster_horror.png" alt="Horror">
+                <img src="assets/poster_crime.png" alt="Crime">
+                <img src="assets/poster_scifi.png" alt="Sci-Fi">
+                <img src="assets/poster_action.png" alt="Action">
+                <img src="assets/poster_fantasy.png" alt="Fantasy">
+                <img src="assets/poster_horror.png" alt="Horror">
+                <!-- Set 2 (Exact Duplicate for Infinite Scroll) -->
+                <img src="assets/poster_crime.png" alt="Crime">
+                <img src="assets/poster_scifi.png" alt="Sci-Fi">
+                <img src="assets/poster_action.png" alt="Action">
+                <img src="assets/poster_fantasy.png" alt="Fantasy">
+                <img src="assets/poster_horror.png" alt="Horror">
+                <img src="assets/poster_crime.png" alt="Crime">
+                <img src="assets/poster_scifi.png" alt="Sci-Fi">
+                <img src="assets/poster_action.png" alt="Action">
+                <img src="assets/poster_fantasy.png" alt="Fantasy">
+                <img src="assets/poster_horror.png" alt="Horror">
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Publicité : Après Hero -->
-    <div class="container my-5" data-aos="fade-up">
-        <div class="ad-container">
-            <!-- Espace Publicitaire Google Ads -->
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3428844633498034"
-                data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </div>
 
-    <section id="info" class="py-5">
+
+    <!-- Aperçu Visuel Simple (Remplacement des carousels) -->
+    <section class="simple-preview" id="apercu">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2 class="animated-title text-uppercase mb-4">Pourquoi Choisir Infinity TV ?</h2>
-                    <p class="lead mb-4">
-                        Découvrez <strong>Infinity TV</strong>, votre solution IPTV de qualité supérieure, conçue pour
-                        transformer votre expérience de divertissement. Que vous soyez amateur de films, de séries, de
-                        sport ou que vous souhaitiez accéder à des chaînes internationales, Infinity TV vous offre un
-                        accès illimité à des milliers de chaînes et de contenus en streaming, en direct et à la demande,
-                        à des prix ultra-compétitifs.
-                    </p>
-                    <ul class="benefits-list list-unstyled mb-4">
-                        <li class="mb-3">
-                            <i class="fas fa-check-circle text-success mr-2"></i><strong>Large choix de chaînes
-                                payantes</strong> et une vaste bibliothèque de films et séries en VOD.
-                        </li>
-                        <li class="mb-3">
-                            <i class="fas fa-check-circle text-success mr-2"></i><strong>Qualité HD, Full HD et
-                                4K</strong>, pour une image claire et nette, avec une fluidité de lecture parfaite.
-                        </li>
-                        <li class="mb-3">
-                            <i class="fas fa-check-circle text-success mr-2"></i><strong>Compatibilité
-                                multi-appareils</strong> : accédez à vos programmes depuis votre télévision, smartphone,
-                            tablette ou ordinateur, où que vous soyez.
-                        </li>
-                        <li class="mb-3">
-                            <i class="fas fa-check-circle text-success mr-2"></i><strong>Service client
-                                réactif</strong>, disponible 24/7, pour vous accompagner et répondre à toutes vos
-                            questions.
-                        </li>
+            <h2 class="section-title">Tout votre contenu au même endroit</h2>
+            <div class="preview-grid">
+                <div class="preview-item">
+                    <img src="assets/thumb_action.png" alt="Films & Séries" class="img-fluid rounded shadow">
+                    <p>Films & Séries Illimités</p>
+                </div>
+                <div class="preview-item">
+                    <img src="assets/thumb_drama.png" alt="Qualité 4K" class="img-fluid rounded shadow">
+                    <p>Qualité 4K HDR</p>
+                </div>
+                <div class="preview-item">
+                    <img src="assets/thumb_black_mirror.png" alt="Chaînes TV" class="img-fluid rounded shadow">
+                    <p>+50 000 Chaînes TV</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="abonnements">
+        <div class="pricing-container">
+            <h2 class="pricing-title">Choisissez votre forfait</h2>
+            <div class="pricing-grid">
+
+                <!-- Standard Plan -->
+                <div class="pricing-card">
+                    <h3 class="plan-name">Standard</h3>
+                    <div class="plan-price">50€<span>/an</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> +14 000 Chaînes</li>
+                        <li><i class="fas fa-check"></i> Qualité HD/FHD</li>
+                        <li><i class="fas fa-check"></i> VOD Films & Séries</li>
+                        <li><i class="fas fa-check"></i> Support 24/7</li>
                     </ul>
-                    <p class="mb-4">
-                        Infinity TV est facile à utiliser et ne nécessite qu'une connexion Internet. Nos forfaits
-                        flexibles et abordables sont adaptés à tous les budgets et besoins. Que vous soyez chez vous ou
-                        en déplacement, vous ne manquerez jamais vos émissions préférées.
-                    </p>
-                    <p class="font-weight-bold text-success">
-                        Rejoignez la révolution IPTV avec Infinity TV et redécouvrez la liberté du divertissement !
-                    </p>
+                    <a href="https://wa.me/33766751050?text=Je%20veux%20l'offre%20Standard%2050€"
+                        class="plan-btn">Choisir</a>
                 </div>
 
-            </div>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h3 class="animated-title mb-3">À Propos de Nous</h3>
-                    <p class="lead">
-                        InfinityTV a été fondé par une équipe passionnée par le streaming et l’innovation technologique.
-                        Nous avons pour mission de rendre le divertissement accessible à tous, peu importe l’appareil
-                        que vous
-                        utilisez. Notre équipe d'experts travaille sans relâche pour garantir une qualité de service
-                        exceptionnelle,
-                        une interface intuitive et une large bibliothèque de contenus variés. Que ce soit pour une
-                        soirée cinéma
-                        en famille, une session de binge-watching ou une soirée entre amis, InfinityTV vous accompagne
-                        avec des
-                        solutions de streaming fiables, modernes et sur mesure.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    </section>
-
-    <!-- Publicité : Centre de contenu -->
-    <div class="container mb-5" data-aos="fade-up">
-        <div class="ad-container">
-            <!-- Espace Publicitaire Google Ads -->
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3428844633498034"
-                data-ad-slot="0987654321" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </div>
-
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <!-- Bloc Mise à Jour des Serveurs -->
-                <div class="col-12 col-md-6 mb-4">
-                    <h2 class="animated-title mb-3">Serveurs Performants et Mise à Jour Continue</h2>
-                    <p>
-                        Nos serveurs sont constamment mis à jour afin de garantir une performance optimale et une
-                        sécurité renforcée. En investissant dans les dernières technologies et en appliquant
-                        régulièrement des améliorations, nous nous assurons que nos infrastructures restent fiables et
-                        rapides. Cela signifie que, peu importe l’affluence ou l’heure de la journée, vous bénéficiez
-                        toujours d’une expérience fluide et sans interruption. De plus, ces mises à jour permettent
-                        d’intégrer de nouvelles fonctionnalités et de maintenir un haut niveau de compatibilité avec les
-                        appareils les plus récents, pour que notre service reste à la pointe de l'innovation.
-                    </p>
-                </div>
-                <!-- Bloc Compatibilité et Essai Gratuit -->
-                <div class="col-12 col-md-6 mb-4">
-                    <h2 class="animated-title mb-3">Compatible sur tous les Écrans et Essai Gratuit Disponible</h2>
-                    <p>
-                        Notre plateforme est conçue pour s’adapter à tous les appareils, que vous soyez sur votre
-                        téléviseur, ordinateur, tablette ou smartphone. Vous pouvez accéder à notre contenu où que vous
-                        soyez et sur l’écran de votre choix, sans compromis sur la qualité. Nous proposons un large
-                        éventail de programmes pour répondre aux attentes de tous les publics : des contenus pour les
-                        enfants, des séries pour adultes, des documentaires, et bien plus encore. Et pour que vous
-                        puissiez tester notre service en toute confiance, nous vous offrons la possibilité de profiter
-                        d’un essai gratuit. Explorez notre contenu, découvrez nos fonctionnalités, et assurez-vous que
-                        notre plateforme répond à vos attentes avant de vous engager.
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center social-section mt-4">
-                    <h2 class="animated-title pt-3 mb-4">Suivez-nous sur les Réseaux Sociaux !</h2>
-                    <div class="social-icons d-flex flex-wrap justify-content-center">
-                        <div class="social-card col-12 col-md-6 col-lg-3 mb-4">
-                            <a href="https://facebook.com/profile.php?id=61567647231463" target="_blank"
-                                aria-label="Facebook">
-                                <i class="fab fa-facebook-f social-icon"></i>
-                            </a>
-                            <p>Rejoignez-nous sur Facebook pour les dernières actualités et offres exclusives.</p>
-                        </div>
-                        <div class="social-card col-12 col-md-6 col-lg-3 mb-4">
-                            <a href="https://instagram.com/infinitytv.streaming/profilecard/?igsh=cXYxaWZqNn-Vzb2Fm"
-                                target="_blank" aria-label="Instagram">
-                                <i class="fab fa-instagram social-icon"></i>
-                            </a>
-                            <p>Suivez-nous sur Instagram pour découvrir nos nouveautés en images.</p>
-                        </div>
-                        <div class="social-card col-12 col-md-6 col-lg-3 mb-4">
-                            <a href="https://snapchat.com/add/infinitytv2024?share_id=tizbJcfKEQE&lo-cale=fr-FR"
-                                target="_blank" aria-label="Snapchat">
-                                <i class="fab fa-snapchat-ghost social-icon"></i>
-                            </a>
-                            <p>Ajoutez-nous sur Snapchat pour un aperçu unique de nos coulisses.</p>
-                        </div>
-                        <div class="social-card col-12 col-md-6 col-lg-3 mb-4">
-                            <a href="https://t.me/iptvgarantie" target="_blank" aria-label="Telegram">
-                                <i class="fab fa-telegram-plane social-icon"></i>
-                            </a>
-                            <p>Rejoignez notre canal Telegram pour rester informé en temps réel.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <!-- Section Abonnements -->
-    <section id="abonnements" class="p-5 bg-dark text-white">
-        <div class="container">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <div class="alert alert-info text-center advert" role="alert">
-                        <h4 class="alert-heading">Procédure d'achat d'abonnement</h4>
-                        <p>
-                            Pour acquérir un abonnement ou un essai, veuillez envoyer un e-mail à notre service client
-                            en précisant
-                            le type d'abonnement souhaité (par exemple, " abo BASIQUE" ou "essai BASIQUE" pour un essai
-                            gratuit).
-                            Vous recevrez ensuite un RIB pour finaliser votre paiement par virement. <br>
-                            tout cela en moins de 24 heures !
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <!-- 6 cards d'abonnements -->
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card custom-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Abonnement BASIQUE</h5>
-                            <h6 class="card-subtitle mb-2">40€/an</h6>
-                            <div class="card-text">+ de 4 102 chaînes avec + de 741 chaînes Française</div>
-                            <ul class="list-unstyled">
-                                <li>+ de 251 chaînes de sport dont + de 16 chaînes DAZN</li>
-                                <li>+ de 20 chaînes pour enfant</li>
-                                <li>Pas de chaînes adulte</li>
-                                <li>+ de 9 000 films et séries</li>
-                            </ul>
-                            <div class="mt-auto">
-                                <a href="mailto:infinitytv.infoclients@gmail.com" class="btn btn-primary">Souscrire</a>
-                                <a href="mailto:infinitytv.infoclients@gmail.com" class="btn btn-secondary">Essai
-                                    gratuit</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Répétez la carte ci-dessus jusqu'à 6 fois -->
-                <!-- Répétez la carte ci-dessus jusqu'à 6 fois -->
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card custom-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Abonnement STANDARD</h5>
-                            <h6 class="card-subtitle mb-2">50€/an</h6>
-                            <div class="card-text">+ de 14 316 chaînes avec + de 779 chaînes Française</div>
-                            <ul class="list-unstyled">
-                                <li>+ de 189 chaînes de sport dont + de 55 chaînes DAZN</li>
-                                <li>+ de 60 chaînes pour enfant</li>
-                                <li>+ de 21 chaîne adulte</li>
-                                <li>+ de 20 000 films et series</li>
-                            </ul>
-                            <div class="mt-auto">
-                                <a href="mailto:infinitytv.infoclients@gmail.com" class="btn btn-primary">Souscrire</a>
-                                <a href="mailto:infinitytv.infoclients@gmail.com" class="btn btn-secondary">Essai
-                                    gratuit</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card custom-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Abonnement PREMIUM</h5>
-                            <h6 class="card-subtitle mb-2">60€/an</h6>
-                            <div class="card-text">+ de 17 613 chaînes avec + de 1 186 chaînes Française</div>
-                            <ul class="list-unstyled">
-                                <li>+ de 222 chaînes de sport dont + de 56 chaînes DAZN</li>
-                                <li>+ de 83 chaînes pour enfant</li>
-                                <li>+ de 89 chaînes cinéma + adulte</li>
-                                <li>+ de 100 000 films et séries</li>
-                            </ul>
-                            <div class="mt-auto">
-                                <a href="mailto:infinitytv.infoclients@gmail.com" class="btn btn-primary">Souscrire</a>
-                                <a href="mailto:infinitytv.infoclients@gmail.com" class="btn btn-secondary">Essai
-                                    gratuit</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="card custom-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Abonnement INFINITY</h5>
-                            <h6 class="card-subtitle mb-2">70€/an</h6>
-                            <div class="card-text">+ de 30 907 chaînes avec + de 1 200 chaînes Française</div>
-                            <ul class="list-unstyled">
-                                <li>+ de 347 chaînes de sport dont + de 59 chaînes DAZN</li>
-                                <li>+ de 100 chaînes pour enfant</li>
-                                <li>+ de 214 chaînes cinéma + adulte</li>
-                                <li>+ de 200 000 films et séries</li>
-                            </ul>
-                            <div class="mt-auto">
-                                <a href="mailto:infinitytv.infoclients@gmail.com" class="btn btn-primary">Souscrire</a>
-                                <a href="mailto:infinitytv.infoclients@gmail.com" class="btn btn-secondary">Essai
-                                    gratuit</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
-                    <div class="card custom-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Abonnement INFINITY +</h5>
-                            <h6 class="card-subtitle mb-2">80€/an</h6>
-                            <div class="card-text">+ de 34 705 chaînes avec + de 1 500 chaînes Française</div>
-                            <ul class="list-unstyled">
-                                <li>+ de 400 chaînes de sport dont + de 60 chaînes DAZN</li>
-                                <li>+ de 120 chaînes pour enfant</li>
-                                <li>+ de 250 chaînes cinéma + adulte</li>
-                                <li>+ de 300 000 films et séries</li>
-                            </ul>
-                            <div class="mt-auto">
-                                <a href="mailto:infinitytv.infoclients@gmail.com" class="btn btn-primary">Souscrire</a>
-                                <a href="mailto:infinitytv.infoclients@gmail.com" class="btn btn-secondary">Essai
-                                    gratuit</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title animated-title">Contactez-nous</h2>
-            <form id="contactForm" class="contact-form">
-                <!-- Honeypot (Anti-Spam) -->
-                <div style="display: none;">
-                    <label for="honeypot">Ne pas remplir / Do not fill</label>
-                    <input type="text" id="honeypot" name="honeypot">
-                </div>
-                <div class="form-group">
-                    <label for="name"></label>
-                    <input type="text" id="name" class="form-control" placeholder="Votre nom" required>
-                </div>
-                <div class="form-group">
-                    <label for="email"></label>
-                    <input type="email" id="email" class="form-control" placeholder="Votre email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message"></label>
-                    <textarea id="message" class="form-control" placeholder="Votre message" rows="5"
-                        required></textarea>
-                </div>
-                <button type="submit" class="btn btn-gradient">Envoyer</button>
-            </form>
-            <div id="responseMessage" class="response-message"></div>
-        </div>
-    </section>
-
-    <!-- Publicité : Avant Footer -->
-    <div class="container mt-5">
-        <div class="ad-container" data-aos="fade-up">
-            <!-- Espace Publicitaire Google Ads -->
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3428844633498034"
-                data-ad-slot="1122334455" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <!-- Footer Pro -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <!-- Colonne 1: Marque -->
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="text-white">InfinityTV</h5>
-                    <p class="footer-desc">
-                        La référence du streaming IPTV en France. Profitez de vos contenus préférés en qualité 4K/HD où
-                        que vous soyez.
-                    </p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
-                        <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                    </div>
-                </div>
-
-                <!-- Colonne 2: Liens Rapides -->
-                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                    <h5>Navigation</h5>
-                    <ul class="footer-links">
-                        <li><a href="#home">Accueil</a></li>
-                        <li><a href="#info">À Propos</a></li>
-                        <li><a href="#abonnements">Abonnements</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                <!-- Premium Plan (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="featured-badge">Le plus populaire</div>
+                    <h3 class="plan-name">Premium</h3>
+                    <div class="plan-price premium-price">80€<span>/an</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> +20 000 Chaînes</li>
+                        <li><i class="fas fa-check"></i> Qualité 4K UHD</li>
+                        <li><i class="fas fa-check"></i> VOD Illimitée</li>
+                        <li><i class="fas fa-check"></i> Replay & Time-Shift</li>
+                        <li><i class="fas fa-check"></i> Anti-Freeze</li>
                     </ul>
+                    <a href="https://wa.me/33766751050?text=Je%20veux%20l'offre%20Premium%2080€"
+                        class="plan-btn premium-btn">Choisir</a>
                 </div>
 
-                <!-- Colonne 3: Support -->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5>Support Client</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Guide d'installation</a></li>
-                        <li><a href="#">Test de débit</a></li>
-                        <li><a href="mailto:infinitytv.infoclients@gmail.com">Signaler un problème</a></li>
+                <!-- VIP Plan -->
+                <div class="pricing-card">
+                    <h3 class="plan-name">VIP Gold</h3>
+                    <div class="plan-price vip-price">100€<span>/an</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Tout Illimité</li>
+                        <li><i class="fas fa-check"></i> 4K HDR+</li>
+                        <li><i class="fas fa-check"></i> Support VIP Prioritaire</li>
+                        <li><i class="fas fa-check"></i> 2 Connexions Simultanées</li>
+                        <li><i class="fas fa-check"></i> Serveurs Dédiés</li>
                     </ul>
+                    <a href="https://wa.me/33766751050?text=Je%20veux%20l'offre%20VIP%20100€"
+                        class="plan-btn vip-btn">Devenir VIP</a>
                 </div>
 
-                <!-- Colonne 4: Contact -->
-                <div class="col-lg-3 col-md-6">
-                    <h5>Contact</h5>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-envelope mr-2 text-cyan"></i> infinitytv.infoclients@gmail.com</li>
-                        <li><i class="fas fa-clock mr-2 text-cyan"></i> 24h/24 - 7j/7</li>
-                        <li><i class="fas fa-shield-alt mr-2 text-cyan"></i> Paiement Sécurisé</li>
-                    </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (New) -->
+    <section class="marquee-section marquee-sports">
+        <div class="marquee-content">
+            <div class="marquee-track-reverse">
+                <!-- Set 1 (12 images: 4 repetitions of 3 unique) -->
+                <img src="assets/poster_football.png" alt="Football">
+                <img src="assets/poster_basketball.png" alt="Basketball">
+                <img src="assets/poster_f1.png" alt="Formule 1">
+                <img src="assets/poster_football.png" alt="Football">
+                <img src="assets/poster_basketball.png" alt="Basketball">
+                <img src="assets/poster_f1.png" alt="Formule 1">
+                <img src="assets/poster_football.png" alt="Football">
+                <img src="assets/poster_basketball.png" alt="Basketball">
+                <img src="assets/poster_f1.png" alt="Formule 1">
+                <img src="assets/poster_football.png" alt="Football">
+                <img src="assets/poster_basketball.png" alt="Basketball">
+                <img src="assets/poster_f1.png" alt="Formule 1">
+
+                <!-- Set 2 (Exact Duplicate for Infinite Scroll) -->
+                <img src="assets/poster_football.png" alt="Football">
+                <img src="assets/poster_basketball.png" alt="Basketball">
+                <img src="assets/poster_f1.png" alt="Formule 1">
+                <img src="assets/poster_football.png" alt="Football">
+                <img src="assets/poster_basketball.png" alt="Basketball">
+                <img src="assets/poster_f1.png" alt="Formule 1">
+                <img src="assets/poster_football.png" alt="Football">
+                <img src="assets/poster_basketball.png" alt="Basketball">
+                <img src="assets/poster_f1.png" alt="Formule 1">
+                <img src="assets/poster_football.png" alt="Football">
+                <img src="assets/poster_basketball.png" alt="Basketball">
+                <img src="assets/poster_f1.png" alt="Formule 1">
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section" id="temoignages">
+        <div class="container">
+            <h2 class="section-title">Ce que disent nos clients</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Honnêtement bluffer par la qualité. Je n'ai plus aucun freeze sur les
+                        match de foot, c'est incroyable."</p>
+                    <p class="testimonial-author">- Thomas D.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"J'ai remplacé Netflix et Canal par cet abonnement. L'économie est
+                        énorme et j'ai encore plus de films."</p>
+                    <p class="testimonial-author">- Sarah M.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★☆</div>
+                    <p class="testimonial-text">"Installation super rapide, le support m'a aidé en 5 minutes sur
+                        WhatsApp. Je recommande."</p>
+                    <p class="testimonial-author">- Karim B.</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="row footer-bottom text-center">
-                <div class="col-12">
-                    <p>&copy; 2024 InfinityTV. Tous droits réservés. <br>
-                        <small>Fait par <a href="https://montanaconnect.online" target="_blank"
-                                class="text-cyan font-weight-bold" style="text-decoration:none;">Montana
-                                Connect</a></small>
-                    </p>
+    <!-- Simple Footer -->
+    <footer class="simple-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">INFINITYTV</div>
+                <div class="footer-links">
+                    <a href="#abonnements">Abonnements</a>
+                    <a href="mentions-legales.html">Mentions Légales</a>
+                    <a href="mailto:Infinitytv.infoclients@gmail.com">Contact</a>
                 </div>
+                <p class="copyright">&copy; 2026 InfinityTV. Tous droits réservés.</p>
+                <p class="footer-credit">Créé par <a href="https://montanaconnect.online" target="_blank">Montana
+                        Connect</a></p>
             </div>
         </div>
     </footer>
-
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" title="Retour en haut">
-        <i class="fas fa-chevron-up"></i>
-    </button>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-    <!-- VanillaTilt for 3D Cards -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
-    <!-- Particles.js -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-    <!-- SEO Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "InfinityTV",
-      "description": "Service IPTV Premium avec chaînes 4K, Full HD et VOD illimitée.",
-      "url": "https://infinitytv.com",
-      "provider": {
-        "@type": "Organization",
-        "name": "InfinityTV",
-        "email": "infinitytv.infoclients@gmail.com"
-      },
-      "areaServed": "France",
-      "availableChannel": {
-        "@type": "ServiceChannel",
-        "serviceType": "IPTV Streaming"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "40.00",
-        "priceCurrency": "EUR",
-        "description": "Abonnement Basique IPTV"
-      }
-    }
-    </script>
 </body>
 
 </html>
