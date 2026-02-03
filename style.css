@@ -223,12 +223,7 @@ img {
     color: #e5e5e5;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     animation: slideUp 0.8s ease-out 0.4s both;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    /* Standard property */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    /* Removed line-clamp to show full text */
 }
 
 .billboard-buttons {
