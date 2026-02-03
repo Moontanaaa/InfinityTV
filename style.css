@@ -200,9 +200,14 @@ img {
 
 .billboard-content {
     position: absolute;
-    top: 35%;
-    left: 4%;
-    max-width: 500px;
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(-50%);
+    /* Adjust for exact center */
+    left: 6%;
+    /* Slightly more padding from left */
+    max-width: 600px;
+    /* Give more room for text */
     z-index: 10;
 }
 
@@ -443,6 +448,10 @@ img {
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(40px);
+    /* Flexbox for correct button alignment */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .pricing-card:nth-child(1) {
@@ -550,6 +559,8 @@ img {
 .plan-btn {
     display: block;
     width: 100%;
+    margin-top: auto;
+    /* Push button to the bottom */
     padding: 12px;
     border-radius: 4px;
     background-color: #404040;
