@@ -13,11 +13,11 @@
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
 
     <meta name="description"
-        content="InfinityTV - Le meilleur service IPTV en France. +50 000 chaînes, Films et Séries en 4K/FHD. Essai gratuit 24h. Compatible Smart TV, Android, iOS, Mag.">
+        content="Découvrez InfinityTV, le service IPTV N°1 en France. +50 000 chaînes, Films et Séries en 4K/FHD. Essai gratuit 24h. Compatible Smart TV, Android, iOS.">
     <meta name="keywords"
-        content="IPTV France, Abonnement IPTV, Meilleur IPTV, IPTV 4K, IPTV Smarters, Smart IPTV, Streaming, VOD, Netflix gratuit, Amazon Prime, Canal+, BeIN Sports">
+        content="IPTV France, N°1 IPTV, Meilleur Abonnement IPTV, IPTV 4K, IPTV Smarters, Streaming Foot, VOD 4K, Netflix gratuit, Canal+ gratuit, BeIN Sports">
     <link rel="canonical" href="https://iptvinfinity.com/" />
-    <title>InfinityTV - Meilleur Abonnement IPTV Premium 4K & VOD en France</title>
+    <title>InfinityTV - N°1 en France - Meilleur Abonnement IPTV 4K & VOD</title>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -39,35 +39,75 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "InfinityTV IPTV Premium",
-      "url": "https://iptvinfinity.com/",
-      "logo": "https://iptvinfinity.com/assets/logo.png",
-      "image": "https://iptvinfinity.com/assets/logo_infinity.jpg",
-      "description": "Service IPTV Premium offrant plus de 50 000 chaînes TV en direct et des contenus à la demande (VOD) en qualité 4K et FHD.",
-      "provider": {
-        "@type": "Organization",
-        "name": "InfinityTV",
-        "url": "https://iptvinfinity.com",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "Infinitytv.infoclients@gmail.com",
-          "contactType": "customer service",
-          "availableLanguage": "French"
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://iptvinfinity.com/#service",
+          "name": "InfinityTV IPTV Premium",
+          "url": "https://iptvinfinity.com/",
+          "logo": "https://iptvinfinity.com/assets/logo.png",
+          "image": "https://iptvinfinity.com/assets/logo_infinity.jpg",
+          "description": "Service IPTV Premium N°1 en France. Accès à +50 000 chaînes, Films et Séries en 4K/FHD. Essai gratuit 24h.",
+          "areaServed": "FR",
+          "provider": {
+            "@type": "Organization",
+            "name": "InfinityTV",
+            "url": "https://iptvinfinity.com"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "50.00",
+            "priceCurrency": "EUR",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://iptvinfinity.com/#abonnements"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1250",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Le service est-il compatible avec ma Smart TV ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, InfinityTV est 100% compatible avec toutes les Smart TV (Samsung, LG, Sony, Android TV) via les applications comme IPTV Smarters, Smart IPTV, ou NET IPTV. Il fonctionne aussi sur FireStick, Apple TV, PC et Smartphone."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Proposez-vous un essai gratuit ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tout à fait. Nous offrons un test de 24h gratuit sans engagement et sans carte bancaire pour que vous puissiez vérifier la qualité et la stabilité de notre service avant de vous abonner."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quelle est la vitesse internet recommandée ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pour profiter de la Ultra HD (4K) sans coupure, une connexion de 15 Mbps est recommandée. Pour la Full HD, 8 Mbps suffisent. La fibre est idéale mais une bonne connexion ADSL/VDSL fonctionne également."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Combien de temps prend l'activation ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "L'activation est quasi-immédiate. Une fois votre demande effectuée, vous recevez vos codes d'accès sous 5 à 15 minutes maximum sur WhatsApp ou par Email."
+              }
+            }
+          ]
         }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "50.00",
-        "priceCurrency": "EUR",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "1250"
-      }
+      ]
     }
     </script>
 
@@ -99,13 +139,15 @@
                     <img src="assets/logo_infinity.jpg" alt="InfinityTV" style="height: 70px; vertical-align: middle;">
                 </a>
                 <ul class="nav-links">
-                    <li><a href="#home">Accueil</a></li>
-                    <li><a href="#abonnements">Abonnements</a></li>
-                    <li><a href="#temoignages">Avis</a></li>
+                    <li><a href="#home" data-i18n="nav_home">Accueil</a></li>
+                    <li><a href="#abonnements" data-i18n="nav_offers">Abonnements</a></li>
+                    <li><a href="#temoignages" data-i18n="nav_reviews">Avis</a></li>
                 </ul>
             </div>
             <div class="nav-right">
-                <a href="https://wa.me/33766751050?text=Je%20veux%20m'abonner" class="btn-subscribe">S'abonner</a>
+                <a href="#abonnements" class="btn-subscribe" data-i18n="nav_subscribe">S'abonner</a>
+                <button id="lang-toggle" class="btn btn-sm btn-outline-light ml-2"
+                    style="border: 1px solid #fff; color: #fff; font-size: 0.8rem;">FR | EN</button>
                 <div class="hamburger-menu">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -123,6 +165,9 @@
                 <li><a href="#temoignages">Avis Clients</a></li>
                 <li><a href="https://wa.me/33766751050?text=Je%20veux%20m'abonner"
                         style="color: #E50914; font-weight: 700;">S'abonner</a></li>
+                <li><button class="btn btn-sm btn-outline-light lang-toggle-btn"
+                        style="border: 1px solid #fff; color: #fff; font-size: 0.9rem; width: 100%; margin-top: 10px;">FR
+                        | EN</button></li>
             </ul>
         </div>
     </nav>
@@ -135,10 +180,12 @@
         <div class="billboard-vignette"></div>
         <div class="billboard-content">
             <h1 class="billboard-title">Infinity TV - La Télévision Réinventée !</h1>
-            <p class="billboard-description">
-                Découvrez <strong>Infinity TV</strong>, votre solution IPTV de qualité, conçue pour révolutionner votre
-                expérience de divertissement.<br>
-                Vous allez vivre un voyage sans fin à travers les chaînes et les contenus.
+            Découvrez <strong>Infinity TV</strong>, votre solution IPTV de qualité, conçue pour révolutionner votre
+            expérience de divertissement.<br>
+            Vous allez vivre un voyage sans fin à travers les chaînes et les contenus.
+            </p>
+            <p class="billboard-rank"
+                style="font-size: 1.2rem; font-weight: bold; margin-bottom: 20px; color: #E50914;">N°1 en France
             </p>
             <div class="billboard-buttons">
                 <a href="#abonnements" class="btn-play">
@@ -157,10 +204,10 @@
             <!-- Duplication x2 pour l'effet infini -->
             <div class="marquee-track">
                 <!-- Set 1 -->
-                <img src="assets/poster_crime.png" alt="Crime">
-                <img src="assets/poster_scifi.png" alt="Sci-Fi">
-                <img src="assets/poster_action.png" alt="Action">
-                <img src="assets/poster_fantasy.png" alt="Fantasy">
+                <img src="assets/custom_poster_1.jpg" alt="Poster 1">
+                <img src="assets/custom_poster_2.jpg" alt="Poster 2">
+                <img src="assets/custom_poster_3.jpg" alt="Poster 3">
+                <img src="assets/custom_poster_4.jpg" alt="Poster 4">
                 <img src="assets/poster_horror.png" alt="Horror">
                 <img src="assets/poster_crime.png" alt="Crime">
                 <img src="assets/poster_scifi.png" alt="Sci-Fi">
@@ -168,10 +215,10 @@
                 <img src="assets/poster_fantasy.png" alt="Fantasy">
                 <img src="assets/poster_horror.png" alt="Horror">
                 <!-- Set 2 (Exact Duplicate for Infinite Scroll) -->
-                <img src="assets/poster_crime.png" alt="Crime">
-                <img src="assets/poster_scifi.png" alt="Sci-Fi">
-                <img src="assets/poster_action.png" alt="Action">
-                <img src="assets/poster_fantasy.png" alt="Fantasy">
+                <img src="assets/custom_poster_1.jpg" alt="Poster 1">
+                <img src="assets/custom_poster_2.jpg" alt="Poster 2">
+                <img src="assets/custom_poster_3.jpg" alt="Poster 3">
+                <img src="assets/custom_poster_4.jpg" alt="Poster 4">
                 <img src="assets/poster_horror.png" alt="Horror">
                 <img src="assets/poster_crime.png" alt="Crime">
                 <img src="assets/poster_scifi.png" alt="Sci-Fi">
@@ -209,7 +256,7 @@
     <!-- Pricing Section -->
     <section class="pricing-section" id="abonnements">
         <div class="pricing-container">
-            <h2 class="pricing-title">Choisissez votre forfait</h2>
+            <h2 class="pricing-title" data-i18n="pricing_title">Choisissez votre forfait</h2>
             <div class="pricing-grid">
 
                 <!-- Standard Plan -->
@@ -248,11 +295,11 @@
                     <div class="plan-price vip-price">100€<span>/an</span></div>
                     <p class="price-subtitle">pour 1 Écran</p>
                     <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> <strong>+ de 40 000 Chaînes</strong></li>
                         <li><i class="fas fa-check"></i> <strong>Jusqu'à 3 Écrans</strong> (Options)</li>
                         <li><i class="fas fa-check"></i> <strong>VPN Intégré</strong></li>
                         <li><i class="fas fa-check"></i> <strong>DNS Illimités</strong></li>
                         <li><i class="fas fa-check"></i> 4K HDR+ & Serveurs Dédiés</li>
-                        <li><i class="fas fa-check"></i> Support VIP Prioritaire</li>
                     </ul>
                     <div class="pricing-options"
                         style="margin-bottom: 15px; text-align: center; font-size: 0.9rem; color: #aaa;">
@@ -324,6 +371,59 @@
                         WhatsApp. Je recommande."</p>
                     <p class="testimonial-author">- Karim B.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container faq-container">
+            <h2 class="section-title">Questions Fréquentes</h2>
+            <div class="faq-intro">
+                <p>Tout ce que vous devez savoir sur le service IPTV N°1 en France.</p>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary data-i18n="faq_q1">Sur quels appareils ça fonctionne ?</summary>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a1">InfinityTV est compatible avec tous les appareils connectés : Smart TV
+                            (Samsung, LG, Android),
+                            Boîtiers Android/Apple TV, Mag, Smartphones (iOS/Android), Tablettes et Ordinateurs. Nous
+                            vous aidons à la configuration.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary data-i18n="faq_q2">Puis-je tester avant d'acheter ?</summary>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a2">Oui, absolument ! Nous proposons un <strong>test gratuit de 24h</strong>
+                            pour vous permettre de juger par vous-même de la qualité 4K et de la stabilité de nos
+                            serveurs.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary data-i18n="faq_q3">J'ai besoin d'un débit internet rapide ?</summary>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a3">Nous recommandons une vitesse d'au moins 10-15 Mbps pour la 4K. Nos
+                            serveurs adaptent aussi le flux si votre connexion est plus lente (qualité HD/SD disponible)
+                            pour éviter les coupures.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary data-i18n="faq_q4">Comment se passe le paiement et l'activation ?</summary>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a4">Contactez-nous simplement via WhatsApp. Le processus est sécurisé et
+                            l'activation est immédiate (moins de 15 minutes) après validation.</p>
+                    </div>
+                </details>
             </div>
         </div>
     </section>

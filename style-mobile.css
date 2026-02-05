@@ -99,6 +99,11 @@
         display: none;
     }
 
+    /* Hide Desktop Language Toggle on Mobile */
+    #lang-toggle {
+        display: none !important;
+    }
+
     /* Improve Billboard Mobile */
     .billboard-title {
         font-size: 2rem;
