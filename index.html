@@ -161,9 +161,9 @@
                 <i class="fas fa-times"></i>
             </div>
             <ul class="mobile-nav-links">
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#abonnements">Nos Offres</a></li>
-                <li><a href="#temoignages">Avis Clients</a></li>
+                <li><a href="#home" data-i18n="nav_home">Accueil</a></li>
+                <li><a href="#abonnements" data-i18n="nav_offers">Nos Offres</a></li>
+                <li><a href="#temoignages" data-i18n="nav_reviews">Avis Clients</a></li>
                 <li><a href="https://wa.me/33766751050?text=Je%20veux%20m'abonner"
                         style="color: #E50914; font-weight: 700;">S'abonner</a></li>
                 <li><button class="btn btn-sm btn-outline-light lang-toggle-btn"
@@ -180,20 +180,20 @@
         </div>
         <div class="billboard-vignette"></div>
         <div class="billboard-content">
-            <h1 class="billboard-title">Infinity TV - La Télévision Réinventée !</h1>
-            <p class="billboard-description">
+            <h1 class="billboard-title" data-i18n="hero_title">Infinity TV - La Télévision Réinventée !</h1>
+            <p class="billboard-description" data-i18n="hero_desc_complete">
                 Découvrez <strong>Infinity TV</strong>, votre solution IPTV de qualité, conçue pour révolutionner votre
                 expérience de divertissement.<br>
                 Vous allez vivre un voyage sans fin à travers les chaînes et les contenus.
             </p>
-            <p class="billboard-rank"
+            <p class="billboard-rank" data-i18n="hero_rank"
                 style="font-size: 1.2rem; font-weight: bold; margin-bottom: 20px; color: #E50914;">N°1 en France
             </p>
             <div class="billboard-buttons">
-                <a href="#abonnements" class="btn-play">
+                <a href="#abonnements" class="btn-play" data-i18n="btn_offers">
                     <i class="fas fa-shopping-cart"></i> Voir les offres
                 </a>
-                <a href="https://wa.me/33766751050?text=Je%20veux%20un%20test" class="btn-info">
+                <a href="https://wa.me/33766751050?text=Je%20veux%20un%20test" class="btn-info" data-i18n="btn_test">
                     <i class="fab fa-whatsapp"></i> Test Gratuit
                 </a>
             </div>
@@ -236,19 +236,19 @@
     <!-- Aperçu Visuel Simple (Remplacement des carousels) -->
     <section class="simple-preview" id="apercu">
         <div class="container">
-            <h2 class="section-title">Tout votre contenu au même endroit</h2>
+            <h2 class="section-title" data-i18n="preview_title">Tout votre contenu au même endroit</h2>
             <div class="preview-grid">
                 <div class="preview-item">
                     <img src="assets/thumb_action.png" alt="Films & Séries" class="img-fluid rounded shadow">
-                    <p>Films & Séries Illimités</p>
+                    <p data-i18n="preview_item_1">Films & Séries Illimités</p>
                 </div>
                 <div class="preview-item">
                     <img src="assets/thumb_drama.png" alt="Qualité 4K" class="img-fluid rounded shadow">
-                    <p>Qualité 4K HDR</p>
+                    <p data-i18n="preview_item_2">Qualité 4K HDR</p>
                 </div>
                 <div class="preview-item">
                     <img src="assets/thumb_black_mirror.png" alt="Chaînes TV" class="img-fluid rounded shadow">
-                    <p>+50 000 Chaînes TV</p>
+                    <p data-i18n="preview_item_3">+50 000 Chaînes TV</p>
                 </div>
             </div>
 
@@ -263,53 +263,60 @@
 
                 <!-- Standard Plan -->
                 <div class="pricing-card">
-                    <h3 class="plan-name">Infinity Standard</h3>
+                    <h3 class="plan-name" data-i18n="plan_standard_name">Infinity Standard</h3>
                     <div class="plan-price">50€<span>/an</span></div>
                     <ul class="plan-features">
-                        <li><i class="fas fa-check"></i> +14 000 Chaînes</li>
-                        <li><i class="fas fa-check"></i> Qualité HD/FHD</li>
-                        <li><i class="fas fa-check"></i> VOD Films & Séries</li>
-                        <li><i class="fas fa-check"></i> Support 24/7</li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feature_channels_14">14 000 Chaînes</span>
+                        </li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feature_quality_hd">Qualité HD/FHD</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feature_vod">VOD Films & Séries</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feature_support">Support 24/7</span></li>
                     </ul>
                     <a href="https://wa.me/33766751050?text=Je%20veux%20l'offre%20Infinity%20Standard%2050€"
-                        class="plan-btn">Choisir</a>
+                        class="plan-btn" data-i18n="plan_btn_choose">Choisir</a>
                 </div>
 
                 <!-- Infinity + Plan (Featured) -->
                 <div class="pricing-card featured">
-                    <div class="featured-badge">Le plus populaire</div>
-                    <h3 class="plan-name">Infinity +</h3>
+                    <div class="featured-badge" data-i18n="plan_popular">Le plus populaire</div>
+                    <h3 class="plan-name" data-i18n="plan_plus_name">Infinity +</h3>
                     <div class="plan-price premium-price">80€<span>/an</span></div>
                     <ul class="plan-features">
-                        <li><i class="fas fa-check"></i> +20 000 Chaînes</li>
-                        <li><i class="fas fa-check"></i> Qualité 4K UHD</li>
-                        <li><i class="fas fa-check"></i> VOD Illimitée</li>
-                        <li><i class="fas fa-check"></i> Replay & Time-Shift</li>
-                        <li><i class="fas fa-check"></i> Anti-Freeze</li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feature_channels_20">20 000 Chaînes</span>
+                        </li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feature_quality_4k">Qualité 4K UHD</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feature_vod_unlimited">VOD Illimitée</span>
+                        </li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feature_replay">Replay & Time-Shift</span>
+                        </li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feature_antifreeze">Anti-Freeze</span></li>
                     </ul>
                     <a href="https://wa.me/33766751050?text=Je%20veux%20l'offre%20Infinity%20Plus%2080€"
-                        class="plan-btn premium-btn">Choisir</a>
+                        class="plan-btn premium-btn" data-i18n="plan_btn_choose">Choisir</a>
                 </div>
 
                 <!-- Infinity Family Plan -->
                 <div class="pricing-card">
-                    <h3 class="plan-name">Infinity Family</h3>
+                    <h3 class="plan-name" data-i18n="plan_family_name">Infinity Family</h3>
                     <div class="plan-price vip-price">100€<span>/an</span></div>
-                    <p class="price-subtitle">pour 1 Écran</p>
+                    <p class="price-subtitle" data-i18n="plan_family_subtitle">pour 1 Écran</p>
                     <ul class="plan-features">
-                        <li><i class="fas fa-check"></i> <strong>+ de 40 000 Chaînes</strong></li>
-                        <li><i class="fas fa-check"></i> <strong>Jusqu'à 3 Écrans</strong> (Options)</li>
-                        <li><i class="fas fa-check"></i> <strong>VPN Intégré</strong></li>
-                        <li><i class="fas fa-check"></i> <strong>DNS Illimités</strong></li>
-                        <li><i class="fas fa-check"></i> 4K HDR+ & Serveurs Dédiés</li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feature_channels_40">+ de 40 000
+                                Chaînes</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feature_screens">Jusqu'à 3 Écrans</span>
+                            (Options)</li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feature_vpn">VPN Intégré</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feature_dns">DNS Illimités</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feature_server">4K HDR+ & Serveurs
+                                Dédiés</span></li>
                     </ul>
                     <div class="pricing-options"
                         style="margin-bottom: 15px; text-align: center; font-size: 0.9rem; color: #aaa;">
-                        <p style="margin: 0;">2 Écrans : <strong>130€</strong></p>
-                        <p style="margin: 0;">3 Écrans : <strong>150€</strong></p>
+                        <p style="margin: 0;"><span data-i18n="screens_2">2 Écrans</span> : <strong>130€</strong></p>
+                        <p style="margin: 0;"><span data-i18n="screens_3">3 Écrans</span> : <strong>150€</strong></p>
                     </div>
                     <a href="https://wa.me/33766751050?text=Je%20veux%20l'offre%20Infinity%20Familly"
-                        class="plan-btn vip-btn">Configurer</a>
+                        class="plan-btn vip-btn" data-i18n="plan_btn_config">Configurer</a>
                 </div>
 
             </div>
@@ -353,23 +360,26 @@
 
     <section class="testimonials-section" id="temoignages">
         <div class="container">
-            <h2 class="section-title">Ce que disent nos clients</h2>
+            <h2 class="section-title" data-i18n="reviews_title">Ce que disent nos clients</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"Honnêtement bluffer par la qualité. Je n'ai plus aucun freeze sur les
+                    <p class="testimonial-text" data-i18n="review_1">"Honnêtement bluffer par la qualité. Je n'ai plus
+                        aucun freeze sur les
                         match de foot, c'est incroyable."</p>
                     <p class="testimonial-author">- Thomas D.</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"J'ai remplacé Netflix et Canal par cet abonnement. L'économie est
+                    <p class="testimonial-text" data-i18n="review_2">"J'ai remplacé Netflix et Canal par cet abonnement.
+                        L'économie est
                         énorme et j'ai encore plus de films."</p>
                     <p class="testimonial-author">- Sarah M.</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">★★★★☆</div>
-                    <p class="testimonial-text">"Installation super rapide, le support m'a aidé en 5 minutes sur
+                    <p class="testimonial-text" data-i18n="review_3">"Installation super rapide, le support m'a aidé en
+                        5 minutes sur
                         WhatsApp. Je recommande."</p>
                     <p class="testimonial-author">- Karim B.</p>
                 </div>
@@ -379,9 +389,9 @@
 
     <section class="faq-section">
         <div class="container faq-container">
-            <h2 class="section-title">Questions Fréquentes</h2>
+            <h2 class="section-title" data-i18n="faq_title">Questions Fréquentes</h2>
             <div class="faq-intro">
-                <p>Tout ce que vous devez savoir sur le service IPTV N°1 en France.</p>
+                <p data-i18n="faq_subtitle">Tout ce que vous devez savoir sur le service IPTV N°1 en France.</p>
             </div>
 
             <div class="faq-item">
@@ -446,12 +456,13 @@
             <div class="footer-content">
                 <div class="footer-logo">INFINITYTV</div>
                 <div class="footer-links">
-                    <a href="#abonnements">Abonnements</a>
-                    <a href="mentions-legales.html">Mentions Légales</a>
-                    <a href="mailto:Infinitytv.infoclients@gmail.com">Contact</a>
+                    <a href="#abonnements" data-i18n="nav_offers">Abonnements</a>
+                    <a href="mentions-legales.html" data-i18n="footer_legal">Mentions Légales</a>
+                    <a href="mailto:Infinitytv.infoclients@gmail.com" data-i18n="footer_contact">Contact</a>
                 </div>
-                <p class="copyright">&copy; 2026 InfinityTV. Tous droits réservés.</p>
-                <p class="footer-credit">Créé par <a href="https://montanaconnect.online" target="_blank">Montana
+                <p class="copyright" data-i18n="footer_copyright">&copy; 2026 InfinityTV. Tous droits réservés.</p>
+                <p class="footer-credit"><span data-i18n="footer_created">Créé par</span> <a
+                        href="https://montanaconnect.online" target="_blank">Montana
                         Connect</a></p>
             </div>
         </div>
